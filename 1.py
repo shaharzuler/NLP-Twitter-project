@@ -8,16 +8,12 @@ import torch
 import nltk
 import pandas as pd
 import numpy as np
-#from sklearn.cluster import k_means, dbscan, estimate_bandwidth, mean_shift, spectral_clustering, ward_tree
 from sklearn.cluster import KMeans 
 nltk.download('punkt')
 
 def cosine(u, v):
     return (np.dot(u, v) / (np.linalg.norm(u) * np.linalg.norm(v)))
 
-# if you are on GPU (encoding ~1000 sentences/s, default)
-#infersent = torch.load('infersent.allnli.pickle')
-# if you are on CPU (~40 sentences/s)
 infersent = torch.load('infersent.allnli.pickle', map_location=lambda storage, loc: storage)
 glove_path='glove.840B.300d.txt'
 infersent.set_glove_path(glove_path)#########
