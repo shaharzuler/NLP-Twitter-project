@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan  2 18:30:26 2018
 
+"""
 @author: Shahar Zuler
 """
 import torch
